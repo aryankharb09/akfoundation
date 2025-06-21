@@ -665,41 +665,35 @@
             font-weight: 600;
             font-size: 14px;
         }
-
+ 
         /* Corporate Partners */
-        .corporate-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-        }
+.scrolling-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
 
-        .corporate-card {
-            background: white;
-            border-radius: 8px;
-            padding: 30px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
+.corporate-grid {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    padding: 1rem 0;
+}
 
-        .corporate-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
+.corporate-card img {
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
+}
 
-        .corporate-card img {
-            max-width: 100%;
-            max-height: 40px;
-            object-fit: contain;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
-        }
+.animate-scroll {
+    animation: scroll-left 25s linear infinite;
+}
 
-        .corporate-card:hover img {
-            filter: grayscale(0%);
-        }
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
 
         /* News Cards */
         .news-grid {
@@ -1220,7 +1214,7 @@
                 <a href="#" class="btn btn-primary">Donate Now</a>
             </div>
             
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -1617,7 +1611,29 @@
                 </div>
             </div>
         </div>
-    </section>
+
+    <div class="mb-6">
+    <h3 class="text-center mb-4" style="font-size: 2rem; font-weight: bold; margin-bottom: 3rem;">Corporate Partners</h3>
+    <div class="scrolling-wrapper">
+        <div class="corporate-grid animate-scroll">
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/240px-Microsoft_logo.svg.png" alt="Microsoft"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/240px-Google_2015_logo.svg.png" alt="Google"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/240px-Amazon_logo.svg.png" alt="Amazon"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/240px-Salesforce.com_logo.svg.png" alt="Salesforce"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/240px-IBM_logo.svg.png" alt="IBM"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/240px-Cisco_logo_blue_2016.svg.png" alt="Cisco"></div>
+
+            <!-- Repeat logos to create continuous scroll -->
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/240px-Microsoft_logo.svg.png" alt="Microsoft"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/240px-Google_2015_logo.svg.png" alt="Google"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/240px-Amazon_logo.svg.png" alt="Amazon"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/240px-Salesforce.com_logo.svg.png" alt="Salesforce"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/240px-IBM_logo.svg.png" alt="IBM"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/240px-Cisco_logo_blue_2016.svg.png" alt="Cisco"></div>
+        </div>
+    </div>
+</div>
+</section>
 
     <!-- Team Section -->
     <section id="team" class="section bg-gray">
@@ -1773,45 +1789,30 @@
                         </div>
                         <p>Collaborating on sustainable development goals and humanitarian initiatives across multiple regions.</p>
                     </div>
+                 </div>
 
-                    <div class="partner-card">
-                        <div class="partner-header">
-                            <div class="partner-logo">
-                                <img src="UDF.jpg" alt="World Health Organization">
-                            </div>
-                            <div>
-                                <h4 class="partner-name">United Doctors Front (UDF)</h4>
-                                <p class="partner-type">Dr. Arun Kumar, National General Seceratory, United Doctors Front (UDF)</p>
-                            </div>
-                        </div>
-                        <p>Joint healthcare initiatives focusing on preventive care and community health education programs.</p>
-                    </div>
-                </div>
+          <!-- Corporate Partners -->
+<div class="mb-6">
+    <h3 class="text-center mb-4" style="font-size: 2rem; font-weight: bold; margin-bottom: 3rem;">Corporate Partners</h3>
+    <div class="scrolling-wrapper">
+        <div class="corporate-grid animate-scroll">
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/240px-Microsoft_logo.svg.png" alt="Microsoft"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/240px-Google_2015_logo.svg.png" alt="Google"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/240px-Amazon_logo.svg.png" alt="Amazon"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/240px-Salesforce.com_logo.svg.png" alt="Salesforce"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/240px-IBM_logo.svg.png" alt="IBM"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/240px-Cisco_logo_blue_2016.svg.png" alt="Cisco"></div>
 
-            <!-- Corporate Partners -->
-            <div class="mb-6">
-                <h3 class="text-center mb-4" style="font-size: 2rem; font-weight: bold; margin-bottom: 3rem;">Corporate Partners</h3>
-                <div class="corporate-grid">
-                    <div class="corporate-card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/240px-Microsoft_logo.svg.png" alt="Microsoft">
-                    </div>
-                    <div class="corporate-card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/240px-Google_2015_logo.svg.png" alt="Google">
-                    </div>
-                    <div class="corporate-card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/240px-Amazon_logo.svg.png" alt="Amazon">
-                    </div>
-                    <div class="corporate-card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/240px-Salesforce.com_logo.svg.png" alt="Salesforce">
-                    </div>
-                    <div class="corporate-card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/240px-IBM_logo.svg.png" alt="IBM">
-                    </div>
-                    <div class="corporate-card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/240px-Cisco_logo_blue_2016.svg.png" alt="Cisco">
-                    </div>
-                </div>
-            </div>
+            <!-- Repeat logos to create continuous scroll -->
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/240px-Microsoft_logo.svg.png" alt="Microsoft"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/240px-Google_2015_logo.svg.png" alt="Google"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/240px-Amazon_logo.svg.png" alt="Amazon"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/240px-Salesforce.com_logo.svg.png" alt="Salesforce"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/240px-IBM_logo.svg.png" alt="IBM"></div>
+            <div class="corporate-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/240px-Cisco_logo_blue_2016.svg.png" alt="Cisco"></div>
+        </div>
+    </div>
+</div>
 
             <!-- Partnership Benefits -->
             <div class="cta-section">
